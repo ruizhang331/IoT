@@ -2,6 +2,12 @@ from pymongo import MongoClient
 from random import randint
 from datetime import datetime
 
+'''
+Example of how to use mongo DB to manipulate IoT device data. 
+1. IoT device generate data as {time:value} pairs.
+2. Use Mongodb to query the data based on time stamp and value
+'''
+
 try:
     client = MongoClient()
     db = client.test_database
