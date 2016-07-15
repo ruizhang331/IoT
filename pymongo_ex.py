@@ -18,7 +18,6 @@ try:
     # query mongo DB with data between start and end time, and value smaller than certain threhold 
     now = datetime.now()
     start = now.replace(hour=8, minute=0, second=0, microsecond=0)
-    end = datetime.strptime("14/07/16 16:30", "%d/%m/%y %H:%M")
 
     for data_reading in sensor_data.find({"$and": [{'date':{"$gt":start,'$lt':now}},{"value": {"$lt": 50}}]}).sort("value"):
         print data_reading
