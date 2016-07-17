@@ -1,0 +1,16 @@
+#Configure the postgres server in MAC OS
+#step 1: Install, using Homebrew
+~$ brew install postgres
+#step 2: configure posrgres server
+~$ sudo mkdir /usr/local/var/postgres
+~$ sudo chown username /usr/local/var/postgres  #replacing username with real one
+~$ initdb /usr/local/var/postgres
+#step 3: start postgres server
+You can now start the database server using:
+
+    postgres -D /usr/local/var/postgres
+or
+    pg_ctl -D /usr/local/var/postgres -l logfile start
+
+
+
