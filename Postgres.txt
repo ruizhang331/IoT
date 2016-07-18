@@ -11,6 +11,15 @@ You can now start the database server using:
     postgres -D /usr/local/var/postgres
 or
     pg_ctl -D /usr/local/var/postgres -l logfile start
+    
+#Here's what I have in my ~/.bashrc file for postgres:
+
+export PGDATA='/usr/local/var/postgres'
+export PGHOST=localhost
+alias start-pg='pg_ctl -l $PGDATA/server.log start'
+alias stop-pg='pg_ctl stop -m fast'
+alias show-pg-status='pg_ctl status'
+alias restart-pg='pg_ctl reload'
 
 
 
