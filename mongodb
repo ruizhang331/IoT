@@ -1,0 +1,7 @@
+#start mongodb
+1. Start a terminal for your mongo server
+2. Go to <mongodb-install-directory>/bin directory
+3. #./mongod
+
+if there is some mongod server started but not cleared. run
+#sudo rm /data/db/mongod.lock
